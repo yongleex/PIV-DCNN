@@ -25,7 +25,7 @@
 The detail of PIV-DCNN structure is described in Fig. 3 of the manuscript.  It is a different evaluation scheme (PIV-DCNN) with multi-level regression deep convolutional neural networks. 
 
 ###  3. The synthetic  training data
-
+$x^2$
 
 ### 4. Network definition
 
