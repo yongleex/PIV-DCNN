@@ -10,7 +10,7 @@
 
 \#5, One pair of the [standard images for particle-image velocimetry](http://iopscience.iop.org/article/10.1088/0957-0233/11/6/311/meta;jsessionid=D021CE0C349B7BAFAFA70B9692312360.ip-10-40-1-105), and the official website [http://www.vsj.or.jp/piv](http://www.vsj.or.jp/piv) is not available.
 
-\#6, An air flow case. Since I can not find the proper site link, you can tell me if have any idea.
+\#6, An air flow case. Since I can not find the proper site link at present, you can tell me if have any idea.
 
 
 
