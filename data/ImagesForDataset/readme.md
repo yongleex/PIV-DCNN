@@ -1,6 +1,6 @@
 # The original 'REAL' images 
 
-All the images (visualized  in the lower part of this page) in this folder are obtained from the public available  website.
+All the images, visualized  in the lower part of this page, in this folder are obtained from the public available  website.
 
 -  **A1.bmp** is from piv challenge,  first image of [Case #A](http://www.pivchallenge.org/pub03/index.html#a). The images  represent the turbulent jet flow with background noise, and non-uniform lighting. 
 
