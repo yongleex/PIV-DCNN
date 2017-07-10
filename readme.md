@@ -5,7 +5,7 @@ We submit it to Experiments in Fluids. Some useful information is also provided 
 2. Installation guidance
 3. More experimental results
 4. Some tips about our method
-5. Links to [data generaton](xx),[experiment arrangement](xx)
+5. Links to [data generaton](https://github.com/yongleex/PIV-DCNN/tree/master/PIV_DNN),[experiment arrangement](https://github.com/yongleex/PIV-DCNN/tree/master/experiments)
 
 ### 1. Directory structure
 ```
