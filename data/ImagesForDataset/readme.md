@@ -12,35 +12,35 @@ All the images (visualized  in the lower part of this page) in this folder are o
 
 ### The images of A1-A8
 
-1. A1 
+1, A1 
 
 ![](https://raw.githubusercontent.com/yongleex/PIV-DCNN/master/data/ImagesForDataset/A1.bmp)
 
-2.A2
+2, A2
 
 ![A2](https://raw.githubusercontent.com/yongleex/PIV-DCNN/master/data/ImagesForDataset/A2.bmp)
 
-3. A3 
+3, A3 
 
 ![A3](https://raw.githubusercontent.com/yongleex/PIV-DCNN/master/data/ImagesForDataset/A3.bmp)
 
-4. A4 
+4, A4 
 
 ![A4](https://raw.githubusercontent.com/yongleex/PIV-DCNN/master/data/ImagesForDataset/A4.bmp)
 
-5. A5 
+5, A5 
 
 ![A5](https://raw.githubusercontent.com/yongleex/PIV-DCNN/master/data/ImagesForDataset/A5.bmp)
 
-6. A6 
+6, A6 
 
 ![A6](https://raw.githubusercontent.com/yongleex/PIV-DCNN/master/data/ImagesForDataset/A6.bmp)
 
-7. A7 
+7, A7 
 
 ![A7](https://raw.githubusercontent.com/yongleex/PIV-DCNN/master/data/ImagesForDataset/A7.bmp)
 
-8. A8 
+8, A8 
 
 ![A8](https://raw.githubusercontent.com/yongleex/PIV-DCNN/master/data/ImagesForDataset/A8.bmp)
 
