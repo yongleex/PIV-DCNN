@@ -93,6 +93,8 @@ The synthetic vector fields can be found in our manuscript.
 
 -  Image warping strategy
 
+![](http://preview.ibb.co/evwpua/2.gif)
+
 ![](https://ibb.co/fSWNEa)
 
 ### 5. Training operation
