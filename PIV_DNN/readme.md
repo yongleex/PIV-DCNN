@@ -96,7 +96,7 @@ Both & 4.2.1 and  & 4.2.1 utilize the  synthetic vector fields in &4.1.
 ##### 4.2.2. Image warping strategy
  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/PIV_DNN/Images/image2.gif" width = "512" height = "350" alt="Warping model" align=center />
 
- The [spline interpolation](https://en.wikipedia.org/wiki/Spline_interpolation) is adopted  to generate warped images.
+ The [spline interpolation](https://en.wikipedia.org/wiki/Spline_interpolation) is adopted  to generate warped images. More information please refer to our manuscript.
 
 
 #### 4.2 Noise and background
