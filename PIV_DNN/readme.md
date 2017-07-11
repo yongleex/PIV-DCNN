@@ -86,7 +86,7 @@ v = @(x,y) P(8)+ P(9)*x+P(10)*x.^2 + P(11)*x.^3 + P(12)*sin(P(13)*x+P(14))-P(12)
 The synthetic vector fields can be found in our manuscript.
 
 
-#### 4.2 Two way to generate training images with the  synthetic flow: the particles model and image warping
+#### 4.2 Two way to generate training images with the  synthetic flow: the particle model (PIG) and image warping
 
 Both & 4.2.1 and  & 4.2.1 utilize the  synthetic vector fields in &4.1. 
 ##### 4.2.1. Particle model
