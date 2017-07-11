@@ -72,6 +72,8 @@ where  p and q are random weights, and e(x,y),g(x,y) denote  the basic algebra f
 |11        | y^3           | [-10,10]        | related to p11  |
 |12        | cos(cx+d)\*sin(cy+d)  - cos(d)\*sin(d)         | [-0.25,0.25]      |   related to p12   |
 
+NOTE: q6-q12 are not independent of p, because of the mass conservation law of the natural flow.  However, the net trained from these data can deal with the 2D planar PIV analysis (may have the out-of-plane motion) because we use DCNN to estimate a single vector instead of the gradients tensor or the whole vector field from an image pair.    
+
 ##### 4.1.3.  Our matlab implementation
 ```Matlab
     u = @(x,y) P(1)+ P(2)*y+ P(3)*y.^2 + P(4)*y.^3  +  P(5)*sin(P(6)*y  +P(7))-P(5)*sin(P(7)) + P(15)*x + 0.5*P(16)*x.^2 +     P(17)*x.*y + ...
