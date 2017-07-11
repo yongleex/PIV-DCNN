@@ -1,6 +1,3 @@
-<script type="text/javascript"
-   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 # Details of the PIV-DCNN
  1. File descriptions
@@ -38,6 +35,11 @@ The key problem of synthetic data is the vector field. We combine random weighte
 
 - $$u(x,y)= \sum p_i \cdot \textbf{e}_i (x,y)$$
 - $$v(x,y)=\sum q_i   \cdot \textbf{g}_i(x,y)$$
+- ![](http://latex.codecogs.com/gif.latex?\\sin(x\) x)
+
+- ![](http://latex.codecogs.com/svg.latex?u(x,y\)= \\sum p_i \\cdot \textbf{e}_i (x,y\))
+- ![](http://www.mathtran.org/\\x^2)
+- ![](http://latex.codecogs.com/gif.latex?1+sin(x))
 
 where  p and q are random weights, and e(x,y),g(x,y) denote  the basic algebra functions.  In our implementation, we use a normalized coordinates x, y in [-0.5,0.5] range.  The specification of our implementation is below, and you can check it with our  Matlab Code.
 
