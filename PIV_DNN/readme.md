@@ -89,11 +89,13 @@ The synthetic vector fields can be found in our manuscript.
 #### 4.2 Two way to generate training images with the  synthetic flow: the particles model and image warping
 -  Particle model
 
-![](https://github.com/yongleex/PIV-DCNN/blob/master/PIV_DNN/Images/image1.jpg =100x100)
+![](https://github.com/yongleex/PIV-DCNN/blob/master/PIV_DNN/Images/image1.jpg)
 
 -  Image warping strategy
 
-![](https://github.com/yongleex/PIV-DCNN/blob/master/PIV_DNN/Images/image2.gif = 512x512)
+![](https://github.com/yongleex/PIV-DCNN/blob/master/PIV_DNN/Images/image2.gif)
+
+ <img src="https://github.com/yongleex/PIV-DCNN/blob/master/PIV_DNN/Images/image1.jpg" width = "300" height = "200" alt="图片名称" align=center />
 
 
 
