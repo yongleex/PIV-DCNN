@@ -20,13 +20,17 @@
 ├── ImgData.mat          #Two default images of 'pivdnn.m',  represents solid rotation.
 └── Nets.mat             #This file stores the  parameters of 6 nets  
 ```
-
+------
 
 ### 2. Our PIV-DCNN structure
 The detail of PIV-DCNN structure is described in Fig. 3 of the manuscript.  It is a different evaluation scheme (PIV-DCNN) with multi-level regression deep convolutional neural networks. 
 
+------
+
 ### 3. Network definition
 Each net is a regression net, whose structure is similar to the [LeNet -5](http://yann.lecun.com/exdb/lenet/) for feature extraction, and  the output of our net is continuous velocity component instead of classification label. Details of the Net can be found in Fig. 4 of our manuscript.
+
+------
 
 ### 4. The synthetic  training data
 
@@ -99,12 +103,19 @@ Both & 4.2.1 and  & 4.2.1 utilize the  synthetic vector fields in &4.1.
  The [spline interpolation](https://en.wikipedia.org/wiki/Spline_interpolation) is adopted  to generate warped images. More information please refer to our manuscript.
 
 
-#### 4.2 Noise and background
+##### 4.2.3. Noise and background
 
 They are also considered in our implementation. Details can be found in our matlab implementation.
 
- -------
+-------
 
+
+### 5. Training operation
+
+[Stochastic gradient descent,SGD](https://en.wikipedia.org/wiki/Stochastic_gradient_descent) with batch size 100, is adopted to conduct optimization of this work.
+
+
+------
 
 
 
