@@ -87,13 +87,21 @@ The synthetic vector fields can be found in our manuscript.
 
 
 #### 4.2 Two way to generate training images with the  synthetic flow: the particles model and image warping
--  Particle model
+
+Both & 4.2.1 and  & 4.2.1 utilize the  synthetic vector fields in &4.1. 
+##### 4.2.1. Particle model
+
  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/PIV_DNN/Images/image1.jpg" width = "512" height = "350" alt="particle model" align=center />
 
--  Image warping strategy
+##### 4.2.2. Image warping strategy
  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/PIV_DNN/Images/image2.gif" width = "512" height = "350" alt="Warping model" align=center />
 
  The [spline interpolation](https://en.wikipedia.org/wiki/Spline_interpolation) is adopted  to generate warped images.
+
+
+#### 4.2 Noise and background
+
+They are also considered in our implementation. Details can be found in our matlab implementation.
 
  -------
 
