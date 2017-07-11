@@ -78,10 +78,10 @@ NOTE: q6-q12 are not independent of p, because of the mass conservation law of t
 ##### 4.1.3.  Our matlab implementation
 ```Matlab
 % Matlab
-    u = @(x,y) P(1)+ P(2)*y+ P(3)*y.^2 + P(4)*y.^3  +  P(5)*sin(P(6)*y  +P(7))-P(5)*sin(P(7)) + P(15)*x + 0.5*P(16)*x.^2 +     P(17)*x.*y + ...
-        P(18)*x.*x.*x/3 + P(19)*x.*y.*y + P(20)*x.*x.*y/2 + P(21).*sin(P(22)*x+P(23)).*cos(P(22)*y+P(23)) - P(21).*sin(P(23)).*cos(P(23));
-    v = @(x,y) P(8)+ P(9)*x+P(10)*x.^2 + P(11)*x.^3 + P(12)*sin(P(13)*x+P(14))-P(12)*sin(P(14)) - P(15)*y -     P(16)*x.*y - 0.5*P(17)*y.^2 - ...
-        P(18)*x.*x.*y - P(19)*y.^3/3  - P(20)*x.*y.*y/2 - P(21).*cos(P(22)*x+P(23)).*sin(P(22)*y+P(23))+ P(21).*cos(P(23)).*sin(P(23));
+u = @(x,y) P(1)+ P(2)*y+ P(3)*y.^2 + P(4)*y.^3  +  P(5)*sin(P(6)*y  +P(7))-P(5)*sin(P(7)) + P(15)*x + 0.5*P(16)*x.^2 +     P(17)*x.*y + ...
+    P(18)*x.*x.*x/3 + P(19)*x.*y.*y + P(20)*x.*x.*y/2 + P(21).*sin(P(22)*x+P(23)).*cos(P(22)*y+P(23)) - P(21).*sin(P(23)).*cos(P(23));
+v = @(x,y) P(8)+ P(9)*x+P(10)*x.^2 + P(11)*x.^3 + P(12)*sin(P(13)*x+P(14))-P(12)*sin(P(14)) - P(15)*y -     P(16)*x.*y - 0.5*P(17)*y.^2 - ...
+    P(18)*x.*x.*y - P(19)*y.^3/3  - P(20)*x.*y.*y/2 - P(21).*cos(P(22)*x+P(23)).*sin(P(22)*y+P(23))+ P(21).*cos(P(23)).*sin(P(23));
 ```
 The synthetic vector fields can be found in our manuscript.
 
