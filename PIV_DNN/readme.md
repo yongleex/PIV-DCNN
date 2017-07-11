@@ -92,8 +92,9 @@ The synthetic vector fields can be found in our manuscript.
 
 -  Image warping strategy
  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/PIV_DNN/Images/image2.gif" width = "512" height = "350" alt="Warping model" align=center />
+
  The [spline interpolation](https://en.wikipedia.org/wiki/Spline_interpolation) is adopted  to generate warped images.
- 
+
  -------
 
 
