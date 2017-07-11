@@ -37,7 +37,7 @@ The key problem of synthetic data is the vector field. We combine random weighte
 
 where  p and q are random weights, and e(x,y),g(x,y) denote  the basic algebra functions.  In our implementation, we use a normalized coordinates x, y in [-0.5,0.5] range.  The specification of our implementation is below, and you can check it with our  Matlab Code.
 
-#### 1. The  u component
+##### 4.1.1. The  u component
 
 |order i| e(x,y)  |  range of p | others|
 |:------:|:--------|:-------------|:---------|
@@ -56,7 +56,7 @@ where  p and q are random weights, and e(x,y),g(x,y) denote  the basic algebra f
 
  
 
-#### 2. The  v component
+##### 4.1.2. The  v component
 |order i| g(x,y)  |  range of q | others|
 |:------:|:--------|:--------------|:--------|
 |1          | 1           | [-Vmax, Vmax]          |  vector component   |
@@ -72,13 +72,14 @@ where  p and q are random weights, and e(x,y),g(x,y) denote  the basic algebra f
 |11        | y^3           | [-10,10]        | related to p11  |
 |12        | cos(cx+d)\*sin(cy+d)  - cos(d)\*sin(d)         | [-0.25,0.25]      |   related to p12   |
 
-#### 3.  Our matlab implementation
+##### 4.1.3.  Our matlab implementation
 ```Matlab
     u = @(x,y) P(1)+ P(2)*y+ P(3)*y.^2 + P(4)*y.^3  +  P(5)*sin(P(6)*y  +P(7))-P(5)*sin(P(7)) + P(15)*x + 0.5*P(16)*x.^2 +     P(17)*x.*y + ...
         P(18)*x.*x.*x/3 + P(19)*x.*y.*y + P(20)*x.*x.*y/2 + P(21).*sin(P(22)*x+P(23)).*cos(P(22)*y+P(23)) - P(21).*sin(P(23)).*cos(P(23));
     v = @(x,y) P(8)+ P(9)*x+P(10)*x.^2 + P(11)*x.^3 + P(12)*sin(P(13)*x+P(14))-P(12)*sin(P(14)) - P(15)*y -     P(16)*x.*y - 0.5*P(17)*y.^2 - ...
         P(18)*x.*x.*y - P(19)*y.^3/3  - P(20)*x.*y.*y/2 - P(21).*cos(P(22)*x+P(23)).*sin(P(22)*y+P(23))+ P(21).*cos(P(23)).*sin(P(23));
 ```
+The synthetic vector fields can be found in our manuscript.
 
 
 #### 4.2 Two way to generate training images with the  synthetic flow: the particles model and image warping operation 
