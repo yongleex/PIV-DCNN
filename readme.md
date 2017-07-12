@@ -66,19 +66,46 @@ Information about the packages
 ### 3. More experimental results
 
 #### 3.1. Vortex Pair flow
+- Raw Images
 
-![PIV images](http://p1.bqimg.com/567571/d84b7a384f45c5c4.gif)
-![The results](http://p1.bpimg.com/567571/bbf5f027c7987455.jpg)
+ <img src="http://p1.bqimg.com/567571/d84b7a384f45c5c4.gif" width = "320" height = "350" alt="particle model" align=left />
+
+- Vector field (color contour reprensents corresponding magnitude)
+
+  <img src="http://p1.bpimg.com/567571/bbf5f027c7987455.jpg" width = "1024" height = "350" alt="particle model" align=left />
+
+- Vector component histogram
+
+  <img src="http://p1.bpimg.com/567571/bbf5f027c7987455.jpg" width = "1024" height = "350" alt="particle model" align=left />
+
 
 #### 3.2. Turbulent Jet
 
-![](http://i1.piimg.com/567571/2a222bf4b0df2329.jpg)
+- Raw Images
+
+ <img src="http://p1.bqimg.com/567571/d84b7a384f45c5c4.gif" width = "320" height = "350" alt="particle model" align=left />
+
+- Vector field (color contour reprensents corresponding magnitude)
+
+  <img src="http://p1.bpimg.com/567571/bbf5f027c7987455.jpg" width = "1024" height = "350" alt="particle model" align=left />
+
+- Vector component histogram
+
+  <img src="http://p1.bpimg.com/567571/bbf5f027c7987455.jpg" width = "1024" height = "350" alt="particle model" align=left />
 
 #### 3.3 Jet flow
 
-![](http://i1.piimg.com/567571/e0499340b52a159a.gif)
-![](http://p1.bqimg.com/567571/656ec5ab15d12e76.jpg)
-![](http://i1.piimg.com/567571/ec45a00a5bcd4f23.jpg)
+- Raw Images
+
+ <img src="http://p1.bqimg.com/567571/d84b7a384f45c5c4.gif" width = "320" height = "350" alt="particle model" align=left />
+
+- Vector field (color contour reprensents corresponding magnitude)
+
+  <img src="http://p1.bpimg.com/567571/bbf5f027c7987455.jpg" width = "1024" height = "350" alt="particle model" align=left />
+
+- Vector component histogram
+
+  <img src="http://p1.bpimg.com/567571/bbf5f027c7987455.jpg" width = "1024" height = "350" alt="particle model" align=left />
 
 
 
