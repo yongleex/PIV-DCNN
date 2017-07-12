@@ -68,48 +68,48 @@ Information about the packages
 #### 3.1. Vortex Pair flow
 - Raw Images
 
-  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/VortexPair/rawImage.gif" width = "320" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/VortexPair/rawImage.gif" width = "320" height = "250" alt="particle model" align=center />
 
 - Vector field (color contour reprensents corresponding magnitude)
 
-  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/VortexPair/vectorField.png" width = "1024" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/VortexPair/vectorField.png" width = "1024" height = "250" alt="particle model" align=center />
 
 - Vector component histogram
 
-  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/VortexPair/hist.png" width = "1024" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/VortexPair/hist.png" width = "1024" height = "200" alt="particle model" align=center />
 
 
 #### 3.2. Turbulent Jet
 
 - Raw Images
 
-  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/TurbulentJet/rawImage.gif" width = "320" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/TurbulentJet/rawImage.gif" width = "320" height = "200" alt="particle model" align=center />
 
 - Vector field (color contour reprensents corresponding magnitude)
 
-  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/TurbulentJet/vectorField.png" width = "1024" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/TurbulentJet/vectorField.png" width = "1024" height = "200" alt="particle model" align=center />
 
 - Smoothed vector field 
 
-  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/TurbulentJet/vectorFieldSmooth.png" width = "1024" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/TurbulentJet/vectorFieldSmooth.png" width = "1024" height = "200" alt="particle model" align=center />
 
 - Vector component histogram
 
-  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/TurbulentJet/hist.png" width = "1024" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/TurbulentJet/hist.png" width = "1024" height = "200" alt="particle model" align=center />
 
 #### 3.3 Jet flow
 
 - Raw Images
 
-  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/Jet/rawImage.gif" width = "320" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/Jet/rawImage.gif" width = "320" height = "200" alt="particle model" align=center />
 
 - Vector field (color contour reprensents corresponding magnitude)
 
-  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/Jet/vectorField.png" width = "1024" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/Jet/vectorField.png" width = "1024" height = "200" alt="particle model" align=center />
 
 - Vector component histogram
 
-  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/Jet/hist.png" width = "1024" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/Jet/hist.png" width = "1024" height = "200" alt="particle model" align=center />
 
 
 
