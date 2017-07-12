@@ -41,7 +41,7 @@
 	|**Methods:**|FFTCC, WIDIM, PIV-DCNN|
 	|**Evaluation Criteria:**| RMSE curve, (Mean bias curve)|
 
-- **exp6.m**: The Modulation Transfer Function of PIV-DCNN, i.e, **spatial resolution test**. $sinusoidal displacement distribution$.
+- **exp6.m**: The Modulation Transfer Function of PIV-DCNN, i.e, **spatial resolution test**. 
 
 	|
 	|:---------------|:---------------|
