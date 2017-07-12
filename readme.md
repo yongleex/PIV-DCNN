@@ -68,7 +68,7 @@ Information about the packages
 #### 3.1. Vortex Pair flow
 - Raw Images
 
-  <img src="http://p1.bqimg.com/567571/d84b7a384f45c5c4.gif" width = "320" height = "350" alt="particle model" align=center />
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/vortexpair1.gif" width = "320" height = "350" alt="particle model" align=center />
 
 - Vector field (color contour reprensents corresponding magnitude)
 
