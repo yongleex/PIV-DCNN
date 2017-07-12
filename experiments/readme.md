@@ -1,19 +1,55 @@
-exp1.m: A simple demo for PIVnet, you can specify the images with a standard dialog box for retrieving files. $Visual results, contour plot, histogram of the velocity components, turbulent energy spectrum$
+# The arrangement of experimental code
 
-exp2.m: The performance investigation (RMS error) of PIVnet with respect to different *particle diameters*. $Uniform Flow$
+- **exp1.m**: A simple demo for PIV-DCNN.
 
-exp3.m: The performance investigation (RMS error) of PIVnet with respect to different *particle concentration* (unit: particles per pixel,ppp). $Uniform Flow$
+	|
+	|:---------------|:---------------|
+	|**Inputs:**| Any two particle images ( pair)| |
+	|**Methods:**|FFTCC, WIDIM, PIV-DCNN|
+	|**Evaluation Criteria:**|Visualized vector field, Magnitude contour , (u+v) histogram,  (turbulent energy spectrum)|
 
-exp4.m: The performance investigation (RMS error) of PIVnet with respect to different *noise level*. $Uniform Flow$
 
+- **exp2.m**: The performance investigation (RMS error) of PIV-DCNN with respect to different **particle diameters**. 
 
-exp5.m: The performance investigation (RMS error) of PIVnet in comparison with FFT-CC and WIDIM methods. $Uniform Flow$ 
+	|
+	|:---------------|:---------------|:-------------|
+	|**Inputs:**| synthetic particle images with uniform flow |  several particle diameters|
+	|**Methods:**|PIV-DCNN|
+	|**Evaluation Criteria:**| RMSE curve, (Mean bias curve)|
 
-exp6.m: The Modulation Transfer Function of PIVnet. $sinusoidal displacement distribution$.
+- **exp3.m**: The performance investigation (RMS error) of PIV-DCNN with respect to different **particle concentration** (unit: particles per pixel,ppp).
 
-exp7.m: The filters visualization.
+	|
+	|:---------------|:---------------|:-------------|
+	|**Inputs:**| synthetic particle images with uniform flow |  several concentrations|
+	|**Methods:**|PIV-DCNN|
+	|**Evaluation Criteria:**| RMSE curve, (Mean bias curve)|
 
-exp8.m: The computational time.
+- **exp4.m**: The performance investigation (RMS error) of PIV-DCNN with respect to different **noise level**. 
+
+	|
+	|:---------------|:---------------|:-------------|
+	|**Inputs:**| synthetic particle images with uniform flow |  several noise levels|
+	|**Methods:**|PIV-DCNN|
+	|**Evaluation Criteria:**| RMSE curve, (Mean bias curve)|
+
+- **exp5.m**: The performance investigation (RMS error) of **PIV-DCNN** in comparison with **FFT-CC** and **WIDIM** methods. 
+
+	|
+	|:---------------|:---------------|
+	|**Inputs:**| synthetic particle images with uniform flow |
+	|**Methods:**|FFTCC, WIDIM, PIV-DCNN|
+	|**Evaluation Criteria:**| RMSE curve, (Mean bias curve)|
+
+- **exp6.m**: The Modulation Transfer Function of PIV-DCNN, i.e, **spatial resolution test**. $sinusoidal displacement distribution$.
+
+	|
+	|:---------------|:---------------|
+	|**Inputs:**| synthetic particle images with sinusoidal flow |  
+	|**Methods:**|FFTCC, WIDIM, PIV-DCNN|
+	|**Evaluation Criteria:**|MC response curve, (RMSE curve)|
+
+- **exp7.m**: The filters visualization.  
 
  
 
