@@ -2,11 +2,9 @@
 
 - **exp1.m**: A simple demo for PIV-DCNN.
 
- 1. **Inputs:**   Any two particle images ( pair)
- 2. **Methods:**  FFTCC, WIDIM, PIV-DCNN
- 3. **Evaluation Criteria:** Visualized vector field, Magnitude contour , (u+v) histogram,  (turbulent energy spectrum).
-
-Monte-Carlo  
+	 1. **Inputs:**   Any two particle images ( pair)
+	 2. **Methods:**  FFTCC, WIDIM, PIV-DCNN
+	 3. **Evaluation Criteria:** Visualized vector field, Magnitude contour , (u+v) histogram,  (turbulent energy spectrum).
 
 ----
 - **exp2.m**: The Monte-Carlo    investigation (RMS error) of PIV-DCNN  performance with respect to different **particle diameters**. 
