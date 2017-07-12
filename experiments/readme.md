@@ -6,8 +6,10 @@
  2. **Methods:**  FFTCC, WIDIM, PIV-DCNN
  3. **Evaluation Criteria:** Visualized vector field, Magnitude contour , (u+v) histogram,  (turbulent energy spectrum).
 
+Monte-Carlo  
+
 ----
-- **exp2.m**: The performance investigation (RMS error) of PIV-DCNN with respect to different **particle diameters**. 
+- **exp2.m**: The Monte-Carlo    investigation (RMS error) of PIV-DCNN  performance with respect to different **particle diameters**. 
 
  1. **Inputs:** synthetic particle images with uniform flow [several particle diameters]
  2. **Methods:** PIV-DCNN
@@ -15,7 +17,7 @@
 
 ----
 
-- **exp3.m**: The performance investigation (RMS error) of PIV-DCNN with respect to different **particle concentration** (unit: particles per pixel,ppp).
+- **exp3.m**: The Monte-Carlo    investigation (RMS error) of PIV-DCNN  performance with respect to different **particle concentration** (unit: particles per pixel,ppp).
 
  1. **Inputs:** synthetic particle images with uniform flow  [several concentrations]
  2. **Methods:** PIV-DCNN
@@ -23,7 +25,7 @@
 
 ----
 
-- **exp4.m**: The performance investigation (RMS error) of PIV-DCNN with respect to different **noise level**. 
+- **exp4.m**: The Monte-Carlo    investigation (RMS error) of PIV-DCNN  performance with respect to different **noise level**. 
 
  1. **Inputs:** synthetic particle images with uniform flow [several noise levels]
  2. **Methods:** PIV-DCNN
@@ -31,7 +33,7 @@
 
 ----
 
-- **exp5.m**: The performance investigation (RMS error) of **PIV-DCNN** in comparison with **FFT-CC** and **WIDIM** methods. 
+- **exp5.m**: The Monte-Carlo    investigation (RMSE performance) of **PIV-DCNN** in comparison with **FFT-CC** and **WIDIM** methods. 
 
 1. **Inputs:** synthetic particle images with uniform flow
 2. **Methods:** FFTCC, WIDIM, PIV-DCNN
@@ -39,7 +41,7 @@
 
 ----
 
-- **exp6.m**: The Modulation Transfer Function of PIV-DCNN, i.e, **spatial resolution test**. 
+- **exp6.m**: The Modulation Transfer Function of PIV-DCNN, i.e, **spatial resolution test**.  Monte-Carlo  Simulations.
 
  1. **Inputs:** synthetic particle images with sinusoidal flow 
  2. **Methods:** FFTCC, WIDIM, PIV-DCNN
