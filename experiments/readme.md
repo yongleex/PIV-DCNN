@@ -51,9 +51,9 @@
 
 	Here, we also visualized  convolutional fitlers of the NetF2 (First and Second CONV filters). The pseudo-colour represents the normalized  filter value in range zero to one.
 
-	<img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/kernels/kernel1.png" width = "320" height = "200" alt="particle model" align=center />
+	<img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/kernels/kernel1.png" width = "400" height = "250" alt="particle model" align=center />
 
-	<img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/kernels/kernel2.png" width = "320" height = "200" alt="particle model" align=center />
+	<img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/kernels/kernel2.png" width = "400" height = "250" alt="particle model" align=center />
 
      They are  quite  different with [other kernels](http://cs231n.github.io/understanding-cnn/) of natural image tasks. Most of the filters works like different particle or particle edge detectors (instead of line/ corner detectors) from these visualized kernel. 
 ------
