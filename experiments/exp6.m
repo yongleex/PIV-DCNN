@@ -10,10 +10,10 @@ close all; clear
 addpath('../PIV_DNN/','../PIVCC/','../pivlab/','../OpticalFlow/');
 
 %% Initial settings
-NormalFrequence = 0.0:0.1:1.6; %NF = Win_size/wave_length;
+NormalFrequence = 0.0:0.1:2; %NF = Win_size/wave_length;
 
 %% Main Loop for different scale
-for j = 1:10
+for j = 1:100
     for i = 1:numel(NormalFrequence)
         [j,i]
         %% moving average filter with size 32
@@ -32,6 +32,7 @@ for j = 1:10
         Filter  = ones(Win_size);
         u_MA = conv2(u,Filter,'same')./conv2(weights,Filter,'same');
         M_MA(i,j) = modul(u,u_MA);
+        RMSE2_MA(i,j)  = (mean((u(:)-u_MA(:)).^2));
         
         
         %- Process the images with One-pass FFT-CC
@@ -42,6 +43,7 @@ for j = 1:10
         v_truth = interp2(yg,xg,v,y_FFTCC,x_FFTCC,'nearest');
         u_truth = interp2(yg,xg,u,y_FFTCC,x_FFTCC,'nearest');
         M_FFTCC(i,j) = modul(u_truth,u_FFTCC);
+        RMSE2_FFTCC(i,j)  = (mean((u_truth(:)-u_FFTCC(:)).^2));
         
         Win_size = 32; step_size = 16;
         wave_length = Win_size/NormalFrequence(i);
@@ -53,7 +55,7 @@ for j = 1:10
         opt3 = opt1;                       opt3.x_step = 16; opt3.y_step = 16;   opt3.x_win = 32; opt3.y_win = 32;
         pass = 3;
         [x_WIDIM,y_WIDIM,u_WIDIM,v_WIDIM] =  PIV_analysis(I1,I2,pass,opt1,opt2,opt3);
-        
+
 %         %- Parameters meaning can be found in <pivlab/Accuracy.m>
 %         s = {'Int. area 1',32;'Step size 1',16;'Subpix. finder',1;'Mask',[];'ROI',[];'Nr. of passes',1;'Int. area 2',32;'Int. area 3',16;'Int. area 4',16;'Window deformation','*spline'};
 %         p = {'ROI',s{5,2};'CLAHE',1;'CLAHE size',50;'Highpass',0;'Highpass size',15;'Clipping',0; 'Wiener',0;'Wiener size',3};
@@ -65,6 +67,7 @@ for j = 1:10
         u_truth = interp2(yg,xg,u,y_WIDIM,x_WIDIM,'nearest');
 %         u_WIDIM = smoothn(u_WIDIM,'robust');
         M_WIDIM(i,j) = modul(u_truth,u_WIDIM);
+        RMSE2_WIDIM(i,j)  = (mean((u_truth(:)-u_WIDIM(:)).^2));
         
         %- Process the images with pivdnn
         Win_size = 64; step_size = 16;
@@ -78,32 +81,47 @@ for j = 1:10
         v_truth = interp2(yg,xg,v,y_pivdnn,x_pivdnn,'nearest');
         u_truth = interp2(yg,xg,u,y_pivdnn,x_pivdnn,'nearest');
         M_pivdnn(i,j) = modul(u_truth,u_pivdnn);
+        RMSE2_pivdnn(i,j)  = (mean((u_truth(:)-u_pivdnn(:)).^2));
     end
 end
 
 save exp6
-M_MA = nanmean(M_MA,2);
-M_FFTCC = nanmean(M_FFTCC,2);
-M_WIDIM = nanmean(M_WIDIM,2);
-M_pivdnn = nanmean(M_pivdnn,2);
+M_MA = nanmean(M_MA,2);           RMSE_MA = sqrt(nanmean(RMSE2_MA,2));
+M_FFTCC = nanmean(M_FFTCC,2);     RMSE_FFTCC = sqrt(nanmean(RMSE2_FFTCC,2));
+M_WIDIM = nanmean(M_WIDIM,2);     RMSE_WIDIM = sqrt(nanmean(RMSE2_WIDIM,2));
+M_pivdnn = nanmean(M_pivdnn,2);   RMSE_pivdnn = sqrt(nanmean(RMSE2_pivdnn,2));
+
 
 %% Display the results
 Colours = linspecer(5);
-lineStyle = {'-'; '-.'; 'd';'p'; '--o';};
-H = figure; hold on; grid on; box on;
+lineStyle = {'-'; '-.'; 'd';'-p'; '-o';};
+H1 = figure; hold on; grid on; box on;
 xlim([min(NormalFrequence(:)),max(NormalFrequence(:))]);
 ylim([-0.5,1.2]);
 set(gca,'ytick',[-0.5 0 0.5 0.8 1 1.2]);
 plot(NormalFrequence,sinc(NormalFrequence),lineStyle{1},'LineWidth',2,'color',Colours(1,:));
 plot(NormalFrequence,M_MA,lineStyle{2},'LineWidth',2,'color',Colours(2,:))
-plot(NormalFrequence,M_FFTCC,lineStyle{3},'LineWidth',2,'MarkerFaceColor',Colours(3,:), 'MarkerEdgeColor','k')
-plot(NormalFrequence,M_WIDIM,lineStyle{4},'LineWidth',2,'MarkerFaceColor',Colours(4,:), 'MarkerEdgeColor','k')
-plot(NormalFrequence,M_pivdnn,lineStyle{5},'LineWidth',2,'color',Colours(5,:),'MarkerFaceColor',Colours(5,:), 'MarkerEdgeColor','k')
+plot(NormalFrequence,M_FFTCC,lineStyle{3},'LineWidth',2,'MarkerFaceColor',Colours(3,:), 'MarkerEdgeColor','k','color',Colours(3,:))
+plot(NormalFrequence,M_WIDIM,lineStyle{4},'LineWidth',2,'MarkerFaceColor',Colours(4,:), 'MarkerEdgeColor','k','color',Colours(4,:))
+plot(NormalFrequence,M_pivdnn,lineStyle{5},'LineWidth',2,'color',Colours(5,:),'MarkerFaceColor',Colours(5,:), 'MarkerEdgeColor','k','color',Colours(5,:))
 H11 = legend('\fontsize{16}sinc(theory)','\fontsize{16}MA Filter','\fontsize{16}FFTCC','\fontsize{16}WIDIM','\fontsize{16}PIV-DCNN','Location','SouthWest');
 xlabel('\fontsize{16}Normalized Window Size');
-ylabel('\fontsize{16}Modulation Coefficient');set(gca,'fontsize',16); set(H,'position',[400 200 600 350]);
+ylabel('\fontsize{16}Modulation Coefficient');set(gca,'fontsize',16); set(H1,'position',[400 200 600 350]);
 plot(NormalFrequence,0.9*ones(size(NormalFrequence)),'--b','LineWidth',2);
 
+H2 = figure; hold on; grid on; box on;
+xlim([min(NormalFrequence(:)),max(NormalFrequence(:))]);
+ylim([-0.05,1.05]);
+set(gca,'ytick',[0, 0.1, 0.5, 0.8, 1]);
+% plot(NormalFrequence,sinc(NormalFrequence),lineStyle{1},'LineWidth',2,'color',Colours(1,:));
+plot(NormalFrequence,RMSE_MA,lineStyle{2},'LineWidth',2,'color',Colours(2,:))
+plot(NormalFrequence,RMSE_FFTCC,lineStyle{3},'LineWidth',2,'MarkerFaceColor',Colours(3,:), 'MarkerEdgeColor','k','color',Colours(3,:))
+plot(NormalFrequence,RMSE_WIDIM,lineStyle{4},'LineWidth',2,'MarkerFaceColor',Colours(4,:), 'MarkerEdgeColor','k','color',Colours(4,:))
+plot(NormalFrequence,RMSE_pivdnn,lineStyle{5},'LineWidth',2,'color',Colours(5,:),'MarkerFaceColor',Colours(5,:), 'MarkerEdgeColor','k','color',Colours(5,:))
+H11 = legend('\fontsize{16}MA Filter','\fontsize{16}FFTCC','\fontsize{16}WIDIM','\fontsize{16}PIV-DCNN','Location','NorthWest');
+xlabel('\fontsize{16}Normalized Window Size');
+ylabel('\fontsize{16}RMSE');set(gca,'fontsize',16); set(H2,'position',[400 200 600 350]);
+plot(NormalFrequence,0.1*ones(size(NormalFrequence)),'--b','LineWidth',2);
 
 end
 

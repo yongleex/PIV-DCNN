@@ -70,8 +70,6 @@ tic;
 pivdnn_time = toc;
 run_time = [FFTCC_time,WIDIM_time,pivdnn_time]
 
-% u_pivdnn = smoothn(u_pivdnn,'robust');
-% v_pivdnn = smoothn(v_pivdnn,'robust');
 
 %- Resample the vector fields with the same nodes of pivdnn (step size = 16)
 v_WIDIM = interp2(y_WIDIM,x_WIDIM,v_WIDIM,y_pivdnn,x_pivdnn,'nearest');
@@ -143,21 +141,35 @@ if opts.show
         Fig7a = [y_pivdnn(:),x_pivdnn(:),y_pivdnn(:)+8*v_FFTCC(:),x_pivdnn(:)+8*u_FFTCC(:),sqrt(v_FFTCC(:).^2+u_FFTCC(:).^2)];
         Fig7b = [y_pivdnn(:),x_pivdnn(:),y_pivdnn(:)+8*v_WIDIM(:),x_pivdnn(:)+8*u_WIDIM(:),sqrt(v_WIDIM(:).^2+u_WIDIM(:).^2)];
         Fig7c = [y_pivdnn(:),x_pivdnn(:),y_pivdnn(:)+8*v_pivdnn(:),x_pivdnn(:)+8*u_pivdnn(:),sqrt(v_pivdnn(:).^2+u_pivdnn(:).^2)];
-    
+   
+%     %- Fig11a
 %     v_pivdnn(v_pivdnn>3) = 3; v_pivdnn(v_pivdnn<-3) = -3;
 %     u_pivdnn(u_pivdnn>3) = 3; u_pivdnn(u_pivdnn<-3) = -3;
 %     v_WIDIM(v_WIDIM>3) = 3; v_WIDIM(v_WIDIM<-3) = -3;
 %     u_WIDIM(u_WIDIM>3) = 3; u_WIDIM(u_WIDIM<-3) = -3;
 %     v_FFTCC(v_FFTCC>3) = 3; v_FFTCC(v_FFTCC<-3) = -3;
 %     u_FFTCC(u_FFTCC>3) = 3; u_FFTCC(u_FFTCC<-3) = -3;
-%     %- Fig11a
-%     figure; imagesc(-u_pivdnn); set(gca,'ydir','reverse');colormap('jet');set(gca,'ydir','reverse');colormap('jet'); set(gca,'yticklabel',[]);set(gca,'xticklabel',[])
+%     save spatialResolutionResult
+%     H5 = figure; hold on; imagesc([-u_pivdnn,NaN(size(u_pivdnn))]); set(gca,'ydir','reverse');colormap('jet');set(gca,'ydir','reverse');colormap('jet'); set(gca,'yticklabel',[]);set(gca,'xticklabel',[])
 %     %- Fig11b
-%     figure; imagesc(-[u_FFTCC(115:150,5:32),-ones(36,1),u_WIDIM(115:150,5:32),-ones(36,1),u_pivdnn(115:150,5:32);...
-%                       -ones(1,86);
-%                       u_FFTCC(160:190,130:157),-ones(31,1),u_WIDIM(160:190,130:157),-ones(31,1),u_pivdnn(160:190,130:157)]); set(gca,'ydir','reverse');colormap('jet'); set(gca,'yticklabel',[]);set(gca,'xticklabel',[])
-% 
-
+%     idx1 = 143:183; idy1 = 5:40;
+%     idx2 = 199:235; idy2 = idy1+135;
+%     rectangle('position',[idy1(1),idx1(1),idy1(end)-idy1(1),idx1(end)-idx1(1)],'LineWidth',3)
+%     rectangle('position',[idy2(1),idx2(1),idy2(end)-idy2(1),idx2(end)-idx2(1)],'LineWidth',3)
+%     set(gca,'xlim',[1,size(u_pivdnn,1)],'ylim',[1,size(u_pivdnn,2)]); box on;axis normal
+%     h = colorbar(); set(h,'Fontsize',16);
+% %     h = colorbar('position',[0.91 0.15 0.03 0.75]); set(h,'Fontsize',16);
+%     H6 = figure; hold on;
+%     data = -[u_FFTCC(idx1,idy1),-ones(numel(idx1),1),u_WIDIM(idx1,idy1),-ones(numel(idx1),1),u_pivdnn(idx1,idy1);...
+%                       -ones(1,3*numel(idy1)+2);
+%                       u_FFTCC(idx2,idy2),-ones(numel(idx2),1),u_WIDIM(idx2,idy2),-ones(numel(idx2),1),u_pivdnn(idx2,idy2)]; data(numel(idx1)+1,numel(idy1)+1) = -3;data(numel(idx1)+1,2*numel(idy1)+2) = 3;
+%     imagesc(data); set(gca,'ydir','reverse');colormap('jet'); set(gca,'yticklabel',[]);set(gca,'xticklabel',[])
+%     text(1,3,'\fontsize{16}FFTCC');  text(2+numel(idy1),3,'\fontsize{16}WIDIM');text(3+2*numel(idy1),3,'\fontsize{16}PIV-DCNN');
+%     text(1,3+numel(idx1),'\fontsize{16}FFTCC'); text(2+numel(idy1),3+numel(idx1),'\fontsize{16}WIDIM');  text(3+2*numel(idy1),3+numel(idx1),'\fontsize{16}PIV-DCNN');
+%     set(gca,'xlim',[0,3+3*numel(idy1)],'ylim',[0,numel(idx1)+numel(idx2)+2]); box on;axis normal
+%     set(H6,'position',[100, 100, 600, 350]); 
+    
+    
 end
 
 end
