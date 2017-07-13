@@ -55,7 +55,7 @@
 
 	<img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/kernels/kernel2.png" width = "320" height = "200" alt="particle model" align=center />
 
-     They are  quite  different with [other kernels](http://cs231n.github.io/understanding-cnn/) of natural image tasks. Most of the filters works like different particle detectors (instead of line/ corner detectors) from these visualized kernel. 
+     They are  quite  different with [other kernels](http://cs231n.github.io/understanding-cnn/) of natural image tasks. Most of the filters works like different particle or particle edge detectors (instead of line/ corner detectors) from these visualized kernel. 
 ------
  
 
