@@ -43,12 +43,19 @@
 
 	 1. **Inputs:** synthetic particle images of sinusoidal flow 
 	 2. **Methods:** FFTCC, WIDIM, PIV-DCNN
-	3. **Evaluation Criteria:** MC response curve, (RMSE curve)
+	 3. **Evaluation Criteria:** MC response curve, (RMSE curve)
 
 ----
 
 - **exp7.m**: The filters visualization.  
 
+Here, we also visualized  convolutional fitlers of the NetF2 (First and Second CONV filters). The pseudo-colour represents the normalized  filter value in range zero to one.
+
+<img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/kernels/kernel1.png" width = "320" height = "200" alt="particle model" align=center />
+
+<img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/kernels/kernel2.png" width = "320" height = "200" alt="particle model" align=center />
+
+------
  
 
 
