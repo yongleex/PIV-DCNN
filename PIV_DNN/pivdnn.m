@@ -80,8 +80,8 @@ start_x = permute(start_x(:), [2 3 1]); % denote the left-up conner
 start_y = permute(start_y(:), [2 3 1]); % denote the left-up conner
 
 %- Get the initial index of each patches
-x_index = repmat(start_x,[64 64 1]) + repmat(meshgrid(0:63)',[1,1,numel(start_x)]);
-y_index = repmat(start_y,[64 64 1]) + repmat(meshgrid(0:63) ,[1,1,numel(start_x)]);
+x_index = single(repmat(start_x,[64 64 1]) + repmat(meshgrid(0:63)',[1,1,numel(start_x)]));
+y_index = single(repmat(start_y,[64 64 1]) + repmat(meshgrid(0:63) ,[1,1,numel(start_x)]));
 
 %% - Main Net Loop
 for i = 1:opts.multiPass
@@ -94,15 +94,18 @@ for i = 1:opts.multiPass
     v_p = repmat(permute(v(:), [2 3 1]), [64, 64, 1]);
     
     %- Update the index of patches
-    x_index1 = double(x_index - 0.5*u_p);
-    y_index1 = double(y_index - 0.5*v_p);
-    x_index2 = double(x_index + 0.5*u_p);
-    y_index2 = double(y_index + 0.5*v_p);
+    x_index1 = single(x_index - 0.5*u_p);
+    y_index1 = single(y_index - 0.5*v_p);
+    x_index2 = single(x_index + 0.5*u_p);
+    y_index2 = single(y_index + 0.5*v_p);
     
     %- Get the patches after window offset
     image1_cut = interp2(y_Index_Img_roi,x_Index_Img_roi,image1_roi,y_index1,x_index1,'spline'); % get the patches in the first image
+    clear y_index1 x_index1
     image2_cut = interp2(y_Index_Img_roi,x_Index_Img_roi,image2_roi,y_index2,x_index2,'spline'); % get the patches in the second image
+    clear y_index2 x_index2
     imgPatches =  cat(3,permute(image1_cut,[1 2 4 3]),permute(image2_cut,[1 2 4 3]));
+    clear image1_cut image2_cut
     
     VectorTemp = zeros(1,1,2,prod(sizV));
     
