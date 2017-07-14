@@ -72,6 +72,8 @@ Information about the packages
 
 - Vector field (color contour reprensents corresponding magnitude)
 
+  <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/VortexPair/PIV_DCNNlevels.gif" width = "1024" height = "250" alt="particle model" align=center />
+
   <img src="https://github.com/yongleex/PIV-DCNN/blob/master/experiments/images/VortexPair/vectorField.png" width = "1024" height = "250" alt="particle model" align=center />
 
 - Vector component histogram
