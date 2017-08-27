@@ -142,7 +142,7 @@ if opts.show
         Fig7b = [y_pivdnn(:),x_pivdnn(:),y_pivdnn(:)+8*v_WIDIM(:),x_pivdnn(:)+8*u_WIDIM(:),sqrt(v_WIDIM(:).^2+u_WIDIM(:).^2)];
         Fig7c = [y_pivdnn(:),x_pivdnn(:),y_pivdnn(:)+8*v_pivdnn(:),x_pivdnn(:)+8*u_pivdnn(:),sqrt(v_pivdnn(:).^2+u_pivdnn(:).^2)];
    
-%     %- Fig11a
+%     %- Fig12a
 %     v_pivdnn(v_pivdnn>3) = 3; v_pivdnn(v_pivdnn<-3) = -3;
 %     u_pivdnn(u_pivdnn>3) = 3; u_pivdnn(u_pivdnn<-3) = -3;
 %     v_WIDIM(v_WIDIM>3) = 3; v_WIDIM(v_WIDIM<-3) = -3;
@@ -151,7 +151,7 @@ if opts.show
 %     u_FFTCC(u_FFTCC>3) = 3; u_FFTCC(u_FFTCC<-3) = -3;
 %     save spatialResolutionResult
 %     H5 = figure; hold on; imagesc([-u_pivdnn,NaN(size(u_pivdnn))]); set(gca,'ydir','reverse');colormap('jet');set(gca,'ydir','reverse');colormap('jet'); set(gca,'yticklabel',[]);set(gca,'xticklabel',[])
-%     %- Fig11b
+%     %- Fig12b
 %     idx1 = 143:183; idy1 = 5:40;
 %     idx2 = 199:235; idy2 = idy1+135;
 %     rectangle('position',[idy1(1),idx1(1),idy1(end)-idy1(1),idx1(end)-idx1(1)],'LineWidth',3)
