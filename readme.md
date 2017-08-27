@@ -52,7 +52,7 @@ We submit it to Experiments in Fluids. Some useful information is also provided 
 ```
 
 ### 2. Installation
-- **Install [CUDA](https://developer.nvidia.com/cuda-downloads) and [CuDNN](https://developer.nvidia.com/cudnn).** 
+- **Install GPU driver, [CUDA](https://developer.nvidia.com/cuda-downloads) and [CuDNN](https://developer.nvidia.com/cudnn).** 
 - **Run `install.m` in the main folder**. It will download the MatConvNet, compile files, and copy some customized files to the MatConvNet automatically.
 - **Cautions:** You need to specify the configure terms (enable GPU, CUDA root, ...) in `install.m` if the default values do not work. (Note, the slow CPU version without GPU support is also ok)
 - **Enjoy it.**  `cd '../PIV_DNN'; run('PIVdnn.m');`  or `cd '../experiments';run('exp1.m')`.
