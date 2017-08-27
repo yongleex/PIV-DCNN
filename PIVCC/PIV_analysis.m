@@ -64,7 +64,7 @@ for i =2:pass
     v_full=interp2(y,x,v,Yq,Xq,'spline');
     warning('on') %#ok<WNON>
     
-    [u,v,~,x,y] = piv_analysis_with_deformation(I1,I2,u_full,v_full,Xq,Yq,optss(i+1));
+    [u,v,~,x,y] = piv_analysis_with_deformation(I1,I2,u_full,v_full,Xq,Yq,optss(i));
     %     figure;quiver(v,u);% debug quiver
 end
 
