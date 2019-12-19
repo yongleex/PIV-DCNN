@@ -123,7 +123,9 @@ Information about the packages
 - The figures in our manuscript (about 2 day to run massive Monte - Carlo simulation):`cd '../experiments'; run('exp0.m')`
 
 
-Yong Lee (Email: [leeyong@hust.edu.cn](leeyong@hust.edu.cn)) @2017-07-10
+~~Yong Lee (Email: [leeyong@hust.edu.cn](leeyong@hust.edu.cn)) @2017-07-10~~
+Yong Lee (Email:[yongli.cv@gmail.com](yongli.cv@gmail.com)) @2019-12-19
+     
 
 
 
