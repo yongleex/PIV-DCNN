@@ -90,7 +90,7 @@ y_Index_start = opts.y_start:opts.y_step:(y_siz-opts.y_win);
 [vector_size_x,vector_size_y] = size(x_Index_start);
 Number_of_vetors = numel(x_Index_start);
 
-[y_Index_win,x_Index_win] = meshgrid(0:(opts.y_win-1),0:(opts.x_win-1)); % The index for a window with 2 indices(x,y)
+[y_Index_win,x_Index_win] = meshgrid(1:(opts.y_win),1:(opts.x_win)); % The index for a window with 2 indices(x,y)
 
 image_patches_index_x = repmat(x_Index_win, [1, 1, Number_of_vetors])+repmat(permute(x_Index_start(:),[2,3,1]), [opts.x_win, opts.y_win, 1]);
 image_patches_index_y = repmat(y_Index_win, [1, 1, Number_of_vetors])+repmat(permute(y_Index_start(:),[2,3,1]), [opts.x_win, opts.y_win, 1]);
