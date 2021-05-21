@@ -23,7 +23,8 @@ if ~exist('matconvnet/matlab/vl_compilenn.m','file');
     fileName = [name,ext];
     
     disp('Downloading MatConvNet......')
-    urlwrite(URL,fileName);    % download
+    %  urlwrite(URL,fileName);    % download
+    websave(fileName, URL);
     disp('Downloading MatConvNet Finished!')
     
     disp('Unziping MatConvNet......')
